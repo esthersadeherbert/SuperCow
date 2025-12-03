@@ -250,9 +250,9 @@ const playerImg = new Image();
 playerImg.src = "assets/player.png";
 
 const enemySprites = [
-  "assets/enemy1.png",
-  "assets/enemy2.png",
-  "assets/enemy3.png",
+  "enemy1.png",
+  "enemy2.png",
+  "enemy3.png",
 ].map((src) => {
   const img = new Image();
   img.src = src;
@@ -269,9 +269,9 @@ const collectSprites = ["assets/collect1.png", "assets/collect2.png"].map(
 
 // CLOUDS
 const cloudImages = [
-  "images/cloud1.png",
-  "images/cloud2.png",
-  "images/cloud3.png",
+  "cloud1.png",
+  "cloud2.png",
+  "cloud3.png",
 ].map((src) => {
   const img = new Image();
   img.src = src;
