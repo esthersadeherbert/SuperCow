@@ -21,7 +21,7 @@ let gameStarted = false;
 // Countdown overlay + number
 const countdownOverlay = document.getElementById("countdown-overlay");
 const countdownEl = document.getElementById("countdown");
-const beepSound = new Audio("sounds/beep.mp3");
+const beepSound = new Audio("beep.mp3");
 
 playBtn.addEventListener("click", () => {
   // hide start screen visually
@@ -247,7 +247,7 @@ function restartGame() {
 // LOAD IMAGES
 //--------------------------------------------------
 const playerImg = new Image();
-playerImg.src = "assets/player.png";
+playerImg.src = "player.png";
 
 const enemySprites = [
   "enemy1.png",
