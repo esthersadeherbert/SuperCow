@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,
+                 maximum-scale=1.0, user-scalable=no"
+                 
+    />
+    <link rel="icon" type="image/png" href="icon.png">
+    <title>Sky Maze Mobile</title>
+
+    <!-- Playful font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="game-wrapper">
+      <!-- GAME CANVAS -->
+      <canvas id="gameCanvas" width="1080" height="1920"></canvas>
+
+      <!-- TOP LEFT SCORE — STAYS ON CANVAS -->
+      <div id="ui">
+        <p>Score: <span id="score">0</span></p>
+      </div>
+
+      <!-- ❤️ LIVES — TOP RIGHT INSIDE CANVAS -->
+      <div id="lives">❤️❤️❤️</div>
+
+      <!-- MUTE TOGGLE -->
+      <button id="mute-btn" aria-label="mute">🔊</button>
+
+      <div id="start-screen">
+        <img id="start-bg" src="images/start-bg.jpg" alt="start background" />
+        <img id="logo" src="images/logo.png" alt="logo" />
+        <p class="best-score-start">Best Score: <span id="best-score-start">0</span></p>
+
+        <button id="play-btn">PLAY</button>
+      </div>
+
+      <!-- TIMER TOP CENTER -->
+      <div id="timer">30</div>
+<!-- WINNER POPUP -->
+<div id="winner-popup" class="popup hidden">
+    <img class="popup-logo" src="images/logo.png">
+    <h1>You Win!</h1>
+    <p>Your Score: <span id="final-score">0</span></p>
+    <p>Best Score: <span id="best-score-win">0</span></p>
+    <button class="popup-btn" onclick="restartGame()">Play Again</button>
+</div>
+
+<!-- GAME OVER POPUP -->
+<div id="gameover-popup" class="popup hidden">
+    <img class="popup-logo" src="images/logo.png">
+    <h1>Game Over</h1>
+    <p>Your Score: <span id="gameover-score">0</span></p>
+    <p>Best Score: <span id="best-score-lose">0</span></p>
+    <button class="popup-btn" onclick="restartGame()">Try Again</button>
+</div>
+
+
+    <div id="countdown-overlay" class="countdown-overlay hidden">
+      <div id="countdown" class="countdown">3</div>
+    </div>
+
+    <!-- AUDIO (will be controlled via JS) -->
+    <audio id="bg-music" src="sounds/music.mp3" loop preload="auto"></audio>
+    <audio id="sfx-collect" src="sounds/collect.mp3" preload="auto"></audio>
+    <audio id="sfx-hit" src="sounds/hit.mp3" preload="auto"></audio>
+
+    <script src="game.js"></script>
+  </body>
+</html>
