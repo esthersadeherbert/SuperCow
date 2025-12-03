@@ -259,7 +259,7 @@ const enemySprites = [
   return img;
 });
 
-const collectSprites = ["assets/collect1.png", "assets/collect2.png"].map(
+const collectSprites = ["collect1.png", "collect2.png"].map(
   (src) => {
     const img = new Image();
     img.src = src;
@@ -642,3 +642,4 @@ function isColliding(a, b) {
 //--------------------------------------------------
 updateLivesUI();
 updateBestScoreUI();
+
